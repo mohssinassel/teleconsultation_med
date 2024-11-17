@@ -3,7 +3,7 @@
 const express = require('express');
 const { DB,PORT } = require('../config/app_config');
 // require('/app/logger/logger');
-const patientRoutes = require('./routes/patientRoute');
+const doctorRoutes = require('./routes/doctorRoute');
 const mongoose = require('mongoose');
 
 // dotenv.config(); // Load environment variables from .env file
@@ -40,13 +40,13 @@ mongoose.connection.on('disconnected', () => {
 // Middleware to parse incoming JSON
 app.use(express.json());
 
-// Use the patient routes
-app.use('/', patientRoutes);
+// Use the doctor routes
+app.use('/', doctorRoutes);
 
 // Start the server
 
 const expServer = app.listen(PORT, async () => {
-  console.log(`App running on port ${PORT} 👌`);
+  console.log(`Doctor running on port ${PORT} 👌`);
 });
 
 app.get('/', (req, res) => {

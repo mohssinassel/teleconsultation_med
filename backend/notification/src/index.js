@@ -3,7 +3,7 @@
 const express = require('express');
 const { DB,PORT } = require('../config/app_config');
 // require('/app/logger/logger');
-const patientRoutes = require('./routes/patientRoute');
+const notificationRoutes = require('./routes/notificationRoute');
 const mongoose = require('mongoose');
 
 // dotenv.config(); // Load environment variables from .env file
@@ -40,8 +40,8 @@ mongoose.connection.on('disconnected', () => {
 // Middleware to parse incoming JSON
 app.use(express.json());
 
-// Use the patient routes
-app.use('/', patientRoutes);
+// Use the notification routes
+app.use('/', notificationRoutes);
 
 // Start the server
 

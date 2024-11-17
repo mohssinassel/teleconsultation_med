@@ -1,5 +1,6 @@
-/backend/appointement/node_modules
+/backend/appointment/node_modules
 /backend/doctor/node_modules
 /backend/gateway/node_modules
 /backend/notification/node_modules
 /backend/patient/node_modules
+/backend/logger/node_modules
